@@ -113,8 +113,8 @@ function app() {
             fetch('https://aibnuhibban.github.io/CQur-an/dist/hadist.json')
                 .then(response => response.json())
                 .then(data => {
-                    this.hadists.push(JSON.parse(data.data))
-                    console.log(this.hadists)
+                    this.hadists.push(data.data)
+                    console.log(JSON.parse(this.hadists))
                 })
                 .catch((error) => {
                     console.error('Error:', error);
