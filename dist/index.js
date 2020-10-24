@@ -112,16 +112,12 @@ function app() {
                 .then(response => response.json())
                 .then(data => {
                     data.data.map(val => {
-                        console.log(val)
                         this.hadists.push({
                             id      : val.id,
                             title   : val.title,
                             source  : val.source,
                             body    : val.body,
                         })
-                    })
-                    this.hadists.map(val => {
-                        console.log(val)
                     })
                 })
                 .catch((error) => {
