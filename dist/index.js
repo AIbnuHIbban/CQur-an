@@ -34,14 +34,15 @@ function app() {
             let count = parseInt(this.todoTo) - parseInt(this.todoFrom) + 1
             let date = hari[tgl.getDay()] + ' ' + tgl.getDate() + ' ' + bulan[tgl.getMonth()] + " " + tgl.getFullYear()
             // Text Color
+            let color
             if (count >= 50) {
-                let color = 'text-blue-500'
+                color = 'text-blue-500'
             }else if(count >= 100){
-                let color = 'text-blue-600'
+                color = 'text-blue-600'
             }else if(count >= 200){
-                let color = 'text-green-400'
+                color = 'text-green-400'
             }else if(count >= 500){
-                let color = 'text-green-500'
+                color = 'text-green-500'
             }
             // Check if Date Already
             if (this.todos.length !== 0) {
