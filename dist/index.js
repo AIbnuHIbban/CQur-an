@@ -111,10 +111,10 @@ function app() {
         },
         hadist() {
             fetch('https://aibnuhibban.github.io/CQur-an/dist/hadist.json')
-                .then(response => response.json())
+                // .then(response => response.json())
                 .then(data => {
-                    this.hadist.push(data)
                     console.log(data)
+                    this.hadists.push(data)
                 })
                 .catch((error) => {
                     console.error('Error:', error);
