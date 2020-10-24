@@ -112,6 +112,7 @@ function app() {
                 .then(response => response.json())
                 .then(data => {
                     data.data.map(val => {
+                        console.log(val)
                         this.hadists.push({
                             id      : val.id,
                             title   : val.title,
@@ -119,7 +120,6 @@ function app() {
                             body    : val.body,
                         })
                     })
-                    console.log(this.hadists)
                 })
                 .catch((error) => {
                     console.error('Error:', error);
