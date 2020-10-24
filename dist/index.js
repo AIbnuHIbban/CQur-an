@@ -18,7 +18,7 @@ function list() {
 function app() {
     list()
     return {
-        hadists: [],
+        hadists: JSON.parse(sessionStorage.getItem("hadist")) || [],
         todos: JSON.parse(localStorage.getItem("database")) || [],
         todoSurah: "",
         todoFrom: 0,
@@ -111,14 +111,11 @@ function app() {
             fetch('https://aibnuhibban.github.io/CQur-an/dist/hadist.json')
                 .then(response => response.json())
                 .then(data => {
-                    data.data.map(val => {
-                        this.hadists.push({
-                            id      : val.id,
-                            title   : val.title,
-                            source  : val.source,
-                            body    : val.body,
-                        })
+                    let allData = data.data.map(val => {
+                        return val
                     })
+                    this.hadists = allData
+                    sessionStorage.setItem("hadist",JSON.stringify(allData));
                 })
                 .catch((error) => {
                     console.error('Error:', error);
