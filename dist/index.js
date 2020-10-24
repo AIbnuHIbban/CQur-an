@@ -18,14 +18,13 @@ function list() {
 function app() {
     list()
     return {
-        hadists: [], 
+        hadists: [],
         todos: JSON.parse(localStorage.getItem("database")) || [],
         todoSurah: "",
         todoFrom: 0,
         todoTo: 0,
         todoId: 1,
         addNote() {
-            console.log(hadist);
             if (this.todoSurah.trim() === "") {
                 return;
             }
@@ -91,8 +90,6 @@ function app() {
 
             // Get Data LocalStorage
             var storedData = JSON.parse(localStorage.getItem("database"));
-            console.log(storedData)
-
             this.todoId++;
             this.todoSurah = "";
             this.todoFrom = "";
