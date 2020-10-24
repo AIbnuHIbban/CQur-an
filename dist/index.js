@@ -18,7 +18,7 @@ function list() {
 function app() {
     list()
     return {
-        hadists: JSON.parse(sessionStorage.getItem("hadist")) || [],
+        hadists: [],
         todos: JSON.parse(localStorage.getItem("database")) || [],
         todoSurah: "",
         todoFrom: 0,

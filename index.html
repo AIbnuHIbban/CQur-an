@@ -11,7 +11,7 @@
 <body class="bg-gray-200 flex justify-center">
     <div class="bg-gray-200 text-gray-800 flex justify-center">
         <div class="container px-3 max-w-md mt-10">
-            <div class="bg-white rounded shadow px-4 py-4" x-data="app()" x-init="hadist()">
+            <div class="bg-white rounded shadow px-4 py-4" x-data="app()">
                 <div class="title font-bold text-lg">CQur'an</div>
                 <div class="text-md">Pencatatan Baca Qur'an Anda</div>
                 <input type="text" list="listsurah" placeholder="Al Baqarah" autofocus
@@ -60,8 +60,8 @@
         </div>
     </div>
     <div class="w-1/2 h-screen bg-white overflow-auto">
-        <div x-data="app()">
-            <template x-for="hadist in hadists">
+        <div x-data="app()" x-init="hadist()">
+            <template x-for="hadist in hadists" x-key="hadist.id">
                 <div class="flex bg-white shadow-lg rounded-lg mx-4 md:mx-auto my-10 max-w-md md:max-w-2xl">
                     <div class="flex items-start px-4 py-6">
                         <img class="w-12 h-12 rounded-full object-cover mr-4 shadow" src="https://images.unsplash.com/photo-1559355324-a5879d536e84?ixlib=rb-1.2.1&auto=format&fit=crop&w=809&q=80" alt="avatar">
