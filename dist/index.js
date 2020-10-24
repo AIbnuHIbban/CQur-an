@@ -111,7 +111,7 @@ function app() {
         },
         hadist() {
             fetch('https://aibnuhibban.github.io/CQur-an/dist/hadist.json')
-                // .then(response => response.json())
+                .then(response => response.json())
                 .then(data => {
                     console.log(data)
                     this.hadists.push(data)
