@@ -98,7 +98,7 @@ function app() {
             this.todoFrom = "";
             this.todoTo = "";
         },
-        deleteTodo(id) {
+        deleteNote(id) {
             // this.todos = this.todos.filter((todo) => id !== todo.id);
             var storedData = JSON.parse(localStorage.getItem("database")) || [];
             storedData.map((val, index) => {
