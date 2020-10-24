@@ -116,6 +116,7 @@ function app() {
                     })
                     this.hadists = allData
                     sessionStorage.setItem("hadist",JSON.stringify(allData));
+                    console.log(allData)
                 })
                 .catch((error) => {
                     console.error('Error:', error);
