@@ -120,6 +120,9 @@ function app() {
                             body    : val.body,
                         })
                     })
+                    this.hadists.map(val => {
+                        console.log(val)
+                    })
                 })
                 .catch((error) => {
                     console.error('Error:', error);
